@@ -1,0 +1,50 @@
+body{
+	width: 950px;
+	height: 1000px;
+	margin: 0px auto;
+/*	background-color: pink;*/
+	border: 1px solid black;
+	}
+.div{
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-top: 4px;
+        background-color: yellow;
+	}
+.div1{
+	width: 450px;
+	height: 450px;
+	float: left;
+	margin-top: 4px;
+        background-color: red;
+	}
+	
+.div2{
+	width: 450px;
+	height: 450px;
+	background-color: green;
+	margin-left: 2px;
+	float: left;
+	margin-top: 4px;
+	}
+.div3{
+	width: 450px;
+	height: 450px;
+	background-color: blue;
+	margin-left: 2px;
+	float: left;
+	margin-top: 4px;
+	}
+
+a:link{
+
+
+font-size:96px;
+text-decoration:none;
+}
+
+a:hover{
+color:black;
+font-size:192px;
+}

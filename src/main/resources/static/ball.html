@@ -1,0 +1,38 @@
+<html>
+<link rel="stylesheet" type="text/css" href="ball.css">
+<head>
+<script language="javascript" type="text/javascript">
+    //定义全局变量
+   directX=1;
+   directY=1;
+   ballX=0;
+   ballY=0;
+   
+   function ballMove(){
+   ballX+=directX;
+   ballY+=directY;
+   
+   //修改div的left top
+   balldiv.style.top=ballY+"px";
+   balldiv.style.left=ballX+"px";
+   
+   //转向
+   if(ballX+balldiv.offsetWidth>=document.body.clientWidth||ballX<=0)
+  {
+   directX=-directX;
+ }
+   if(ballY+balldiv.offsetHeight>=document.body.clientHeight||ballY<=0)
+  {
+   directY=-directY;
+ }
+}
+   setInterval("ballMove()",8);
+</script>
+</head>
+<body style="background-image: url('mg.jpg')">
+
+<div id="balldiv"  style="position:absolute">
+<img  src="ml.png"/>
+</div>
+</body>
+</html>

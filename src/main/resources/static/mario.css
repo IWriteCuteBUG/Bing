@@ -1,0 +1,20 @@
+body{
+    width: 880px;
+    height:600px;
+	margin: 0px auto;
+//background-color:blue
+	//border: 1px solid black;;
+        background:url(BJ.jpg);
+        background-size:880px,600px;
+	}
+.gamediv{
+    width: 880px;
+    height:600px;
+    //background-color:pink;
+    position:absolute;
+}
+.controlcenter{
+    width:200px;
+    height:200px;
+    //border:1px solid red;
+}

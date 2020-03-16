@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="javascript">
+function checkuser(){
+if($("username").value=="bing"&&$("pwd").value=="520"){
+return true;
+}
+else{
+$("username").value="";
+$("pwd").value="";
+window.alert("用户名或密码错误");
+return false;
+}
+}
+function $(id){
+return document.getElementById(id);
+}
+</script>
+</head>
+<body style="background-image: url('x0.jpg')">
+<form action="ok.html" align="center">
+<P style="font-size:200px">MY WORLD</P>
+用户名:<input type="text" id="username" value=""></br>
+密&nbsp;&nbsp;码:<input type="password" id="pwd" value=""></br>
+<input type="submit" value="登陆" onclick="return checkuser()"></br>
+</form>
+</body>
+</html>

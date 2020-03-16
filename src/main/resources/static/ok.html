@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="javascript">
+function tiao(){
+clearInterval(mytime);
+window.open("sh.html","_self");
+}
+setTimeout("tiao()",5000);
+
+function change(){
+$("time").innerText=parseInt($("time").innerText)-1;
+}
+var mytime=setInterval("change()",1000);
+
+function $(id){
+return document.getElementById(id);
+}
+</script>
+</head>
+<body style="background-image: url('tiao1.jpg');font-size:100px" align="center">
+<font face="华文彩云">登陆成功<br/>
+<span id="time">5</span>秒钟之后进入MY WORLD</font>
+</body>
+</html>

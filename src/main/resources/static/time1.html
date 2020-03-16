@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body style="font-siae=20px"><center>
+当前时间：
+<div id="time">
+				
+				<script>
+				document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());
+				setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+
+				</script>
+</div></center>
+</body>
+</html>

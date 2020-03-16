@@ -1,0 +1,141 @@
+ <html>
+<link rel="stylesheet" type="text/css" href="mario.css">
+
+<head>
+<script language="javascript" type="text/javascript">
+<!--
+    //定义全局变量
+   directX=1;
+   directY=1;
+   ballX=0;
+   ballY=0;
+   
+   function ballMove(){
+   ballX+=directX;
+   ballY+=directY;
+   
+   //修改div的left top
+   balldiv.style.top=ballY+"px";
+   balldiv.style.left=ballX+"px";
+   
+   //转向
+   if(ballX+balldiv.offsetWidth>=document.body.clientWidth||ballX<=0)
+  {
+   directX=-directX;
+ }
+   if(ballY+balldiv.offsetHeight>=document.body.clientHeight||ballY<=0)
+  {
+   directY=-directY;
+ }
+}
+   setInterval("ballMove()",8);
+   //主类
+   function Mario(){
+   this.x=0;
+   this.y=0;
+   var mWidth=50;
+   var mHeight=50;
+   var gWidth=50;
+   var gHeight=50;
+   //移动
+   this.move=function(direct){
+      var myml=document.getElementById('myml');
+      var top=myml.style.top;
+      top=parseInt(top.substr(0,top.length-2));
+      var myml=document.getElementById('myml');
+      var left=myml.style.left;
+      left=parseInt(left.substr(0,left.length-2));
+   switch(direct){
+       case 0:
+      //window.alert("hello222!");
+
+      myml.style.top=(top-100)+"px";
+      break;
+       case 1:
+
+      myml.style.left=(left-100)+"px";
+      break;
+       case 2:
+      myml.style.left=(left+100)+"px";
+      break;
+       case 3:
+      myml.style.top=(top+100)+"px";
+      break;
+    }
+      var balldiv=document.getElementById('balldiv');
+      var top1=balldiv.style.top;
+      top1=parseInt(top.substr(0,top.length-2));
+      var balldiv=document.getElementById('balldiv');
+      var left1=balldiv.style.left;
+      left1=parseInt(left.substr(0,left.length-2));
+      y=Math.abs(top-top1);
+      y=Math.abs(left-left1);
+   
+     xx=0;
+     yy=0;
+   
+     if(top<top1)
+{
+     if(y<mHeight)
+{
+      yy=1;
+}else{
+  if(y<gHeight){
+      yy=1;
+   }
+ }
+}
+
+     if(left<left1)
+{
+     if(x<mWidth)
+{
+      xx=1;
+}else{
+  if(x<gmWidth){
+      xx=1;
+   }
+ }
+}
+
+if(yy==1&&xx==1){
+   window.alert("被蘑菇吃了");
+   
+}
+  
+  }
+}
+
+var mario= new Mario();
+
+ function marioMove(direct){
+   switch(direct){
+       case 0:
+      mario.move(direct)
+      break;
+       case 1:
+      mario.move(direct)      
+      break;
+       case 2:
+      mario.move(direct)     
+      break;
+       case 3:
+      mario.move(direct)     
+      break;
+}
+}
+//-->
+</script>
+  </head>
+ <body>
+<table class="controlcenter" align="center">
+<tr><td></td><td><input type="button" value="↑↑" onclick="marioMove(0)"/></td><td></td></tr>
+<tr><td><input type="button" value="←←" onclick="marioMove(1)"/></td><td></td><td><input type="button" value="→→" onclick="marioMove(2)"/></td></tr>
+<tr><td></td><td><input type="button" value="↓↓" onclick="marioMove(3)"/></td><td></td></tr>
+</table>
+<div class="gamediv">
+<img id="myml"  style="width:50px;height:50px;left:0px;top:0px;position:absolute;" src="ml.png"/>
+</div>
+<img id="balldiv"  style="width:50px;height:50px;left:100px;top:200px;position:absolute;" src="mg.jpg"/>
+</body>
+</html>
